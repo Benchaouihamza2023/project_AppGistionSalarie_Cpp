@@ -1,9 +1,11 @@
 #include<iostream>
+#include <string.h>
 #include "class\salarie.hpp"
 using namespace std;
 
 int main() {
 	int choix;
+	salarie ob;
 	cout << "\t --Ce programme pour Gistion de Salarie --\n";
 	do {
 		cout << "1 - add Un Salarie : " << endl;
@@ -19,22 +21,22 @@ int main() {
 		//le switch
 		switch (choix) {
 		case 1:
-			addUnSalarie();
+			ob.addUnSalarie();
 			break;
 		case 2:
-			afficheInformationDesSalaries()
+			ob.afficheInformationDesSalaries();
 			break;
 		case 3:
-			modifierInformationSalarie();
+			ob.modifierInformationSalarie();
 			break;
 		case 4:
-			modifierInformationSalarie();
+			ob.modifierInformationSalarie();
 			break;
 		case 5:
-			ajouterMoisPayePourSalaries();
+			ob.ajouterMoisPayePourSalaries();
 			break;
 		case 6:
-			removeUnSalarie();
+			ob.removeUnSalarie();
 			break;
 		case 7:
 			//exit est une foncion predéfini dans c++

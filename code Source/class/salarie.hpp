@@ -1,6 +1,8 @@
 #ifndef salarie_HPP_INCLUDED
 #define salarie_HPP_INCLUDED
-#include <string.h>
+#include<iostream>
+#include <string>
+using namespace std;
 class salarie
 {
 	int id;
@@ -10,7 +12,7 @@ class salarie
 
 
 public:
-	//salarie();
+    //salarie();
 	//ecrire votre code
 
 
