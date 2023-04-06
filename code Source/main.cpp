@@ -1,5 +1,5 @@
 #include<iostream>
-//#include "class\salarie.hpp"
+#include "class\salarie.hpp"
 using namespace std;
 
 int main() {
@@ -19,22 +19,22 @@ int main() {
 		//le switch
 		switch (choix) {
 		case 1:
-			//addUnSalarie();
+			addUnSalarie();
 			break;
 		case 2:
-			//afficheInformationDesSalaries()
+			afficheInformationDesSalaries()
 			break;
 		case 3:
-			//modifierInformationSalarie();
+			modifierInformationSalarie();
 			break;
 		case 4:
-			//modifierInformationSalarie();
+			modifierInformationSalarie();
 			break;
 		case 5:
-			//ajouterMoisPayePourSalaries();
+			ajouterMoisPayePourSalaries();
 			break;
 		case 6:
-			//removeUnSalarie();
+			removeUnSalarie();
 			break;
 		case 7:
 			//exit est une foncion predéfini dans c++

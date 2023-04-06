@@ -1,13 +1,13 @@
 #ifndef salarie_HPP_INCLUDED
 #define salarie_HPP_INCLUDED
-
+#include <string.h>
 class salarie
 {
 	int id;
 	string prenomDeSalarie;
 	string nomDeSalarie;
 	double valDeSalarie;
-	
+
 
 public:
 	//salarie();
