@@ -1,18 +1,34 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 #include <string.h>
 #include "class\salarie.hpp"
-using namespace std;
 
+using namespace std;
+salarie fovtinSalarie(){
+	salarie temp;
+	temp.addUnSalarie();
+    return temp;
+}
+void removeUnSalarie(vector <salarie> &ob,int& i,int id ) {
+	int position;
+		for (int j=0;j<=i;j++){
+		if(ob[j].getId() == id)
+			position=j;
+		}
+		for (int j=position;j<i;j++){
+			ob[j]=ob[j+1];
+		}
+}
 int main() {
-	int choix;
-	salarie ob;
+	int choix,i=0,k,id;
+	vector <salarie> ob;
 	cout << "\t --Ce programme pour Gistion de Salarie --\n";
 	do {
 		cout << "1 - add Un Salarie : " << endl;
 		cout << "2 - affiche les Informations des Salaries - " << endl;
 		cout << "3 - affiche les Informations de Salaries - "<< endl;
 		cout << "4 - modifier les Information de Salarie - " << endl;
-		cout << "5 - ajouter un mois payé pourtoutes les Salaries - " << endl;
+		cout << "5 - ajouter un salire - " << endl;
 		cout << "6 - delete les Information de Salarie - " << endl;
 		cout << "7 - EXIT - " << endl;
 		//Saisir le choix
@@ -21,31 +37,37 @@ int main() {
 		//le switch
 		switch (choix) {
 		case 1:
-			ob.addUnSalarie();
+			ob.push_back(fovtinSalarie());//pour add un valeur in table de ob
+			i++;
 			break;
-		case 2:
-			ob.afficheInformationDesSalaries();
+		case 2 :
+			ob[0].afficheInformationSalarie();
 			break;
 		case 3:
-			ob.modifierInformationSalarie();
+		for(k = 0; k<i;k++)
+			ob[k].afficheInformationSalarie();
 			break;
 		case 4:
-			ob.modifierInformationSalarie();
+			ob[i].modifierInformationSalarie();
 			break;
 		case 5:
-			ob.ajouterMoisPayePourSalaries();
+			ob[i].ajouterMoisPayePourSalaries();
 			break;
 		case 6:
-			ob.removeUnSalarie();
+			cout << "saisir id de votre salarie : ";
+			cin >> id ;
+			removeUnSalarie(ob,i,id);
+			i-=1;
 			break;
 		case 7:
-			//exit est une foncion predéfini dans c++
+			//exit est une foncion predefini dans c++
 			exit(1);
 			break;
 			//
 		default:
 			cout << "votre choix n'exist pas";
 		}
+
 	} while (true);
 	return 0;
 }
