@@ -45,9 +45,20 @@ public:
 	void ajouterMoisPayePourSalaries() {
 
 	}
-};
+
 void rechercheUnSalarie() {
-
+	string nom;
+	string prenom;
+	cout << "Entrez le nom du salarie : ";
+	cin >> nom;
+	cout << "Entrez le prenom du salarie : ";
+	cin >> prenom;
+	if (nom == nomDeSalarie && prenom == prenomDeSalarie) {
+		afficheInformationSalarie();
+	}
+	else {
+		cout << "Salarie non trouve." << endl;
+	}
 }
-
+};
 #endif // INCLUDED
