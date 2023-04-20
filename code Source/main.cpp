@@ -4,21 +4,6 @@
 #include "class\salarie.hpp"
 
 using namespace std;
-salarie fovtinSalarie(){
-	salarie temp;
-	temp.addUnSalarie();
-    return temp;
-}
-void removeUnSalarie(vector <salarie> &ob,int& i,int id ) {
-	int position;
-		for (int j=0;j<=i;j++){
-		if(ob[j].getId() == id)
-			position=j;
-		}
-		for (int j=position;j<i;j++){
-			ob[j]=ob[j+1];
-		}
-}
 int main() {
 	int choix,i=0,k,id;
 	vector <salarie> ob;
@@ -28,7 +13,7 @@ int main() {
 		cout << "2 - affiche les Informations des Salaries - " << endl;
 		cout << "3 - affiche les Informations de Salaries - "<< endl;
 		cout << "4 - modifier les Information de Salarie - " << endl;
-		cout << "5 - ajouter un salire - " << endl;
+		cout << "5 - piement des salaires - " << endl;
 		cout << "6 - delete les Information de Salarie - " << endl;
 		cout << "7 - EXIT - " << endl;
 		//Saisir le choix
@@ -37,7 +22,7 @@ int main() {
 		//le switch
 		switch (choix) {
 		case 1:
-			ob.push_back(fovtinSalarie());//pour add un valeur in table de ob
+			ob.push_back(foctionSalarie());//pour add un valeur in table de ob
 			i++;
 			break;
 		case 2 :
@@ -51,7 +36,7 @@ int main() {
 			ob[i].modifierInformationSalarie();
 			break;
 		case 5:
-			ob[i].ajouterMoisPayePourSalaries();
+			ob[i].piementDesSalaires();
 			break;
 		case 6:
 			cout << "saisir id de votre salarie : ";

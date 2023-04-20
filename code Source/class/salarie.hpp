@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 class salarie
 {
 	int id;
@@ -17,13 +18,13 @@ public:
 		return id;
 	};
 	void addUnSalarie() {
-		cout << "id : ";
+		cout << "Entrez id du salarie : ";
 		cin >> this->id;
-		cout << "nom : ";
+		cout << "Entrez le nom du salarie : ";
 		cin >> this->nomDeSalarie;
-		cout << "pre : ";
+		cout << "Entrez le prenom du salarie : ";
 		cin >> this->prenomDeSalarie;
-		cout << "sal : ";
+		cout << "Entrez le salaire du salarie : ";
 		cin >> this->valSalarie;
 	}
 	// afichage
@@ -42,7 +43,7 @@ public:
 		cin >> this->valSalarie;
 	}
 	//**des fonction
-	void ajouterMoisPayePourSalaries() {
+	void piementDesSalaires() {
 
 	}
 
@@ -61,4 +62,21 @@ void rechercheUnSalarie() {
 	}
 }
 };
+
+salarie foctionSalarie(){
+	salarie temp;
+	temp.addUnSalarie();
+    return temp;
+}
+void removeUnSalarie(vector <salarie> &ob,int& i,int id ) {
+	int position;
+		for (int j=0;j<=i;j++){
+		if(ob[j].getId() == id)
+			position=j;
+		}
+		for (int j=position;j<i;j++){
+			ob[j]=ob[j+1];
+		}
+}
+
 #endif // INCLUDED
