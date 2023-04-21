@@ -74,9 +74,7 @@ public:
 				cout << "nom : " << nomDeSalarie << endl;
 				cout << "pre : " << prenomDeSalarie << endl;
 				cout << "sal : " << valSalarie << endl;
-			}
-			else {
-				cout << "Salarie non trouve." << endl;
+				break;
 			}
 		}
 	}
