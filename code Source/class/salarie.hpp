@@ -98,10 +98,10 @@ void removeUnSalarie(vector <salarie> &ob, int& i, int id) {
 void afficheInformationdesSalarie(vector <salarie> &ob, int& i) {
 		int j;
 		for (j = 0; j <= i; j++) {
-				cout << "id est  " << ob[i].id << endl;
-				cout << "nom est  " <<ob[i]. nomDeSalarie << endl;
-				cout << "prenom est " <<ob[i]. prenomDeSalarie << endl;
-				cout << "salarie est   " << ob[i].valSalarie << endl;
+				cout << "id est  " << ob[j].id << endl;
+				cout << "nom est  " <<ob[j]. nomDeSalarie << endl;
+				cout << "prenom est " <<ob[j]. prenomDeSalarie << endl;
+				cout << "salarie est   " << ob[j].valSalarie << endl;
 	
 		
 		}
