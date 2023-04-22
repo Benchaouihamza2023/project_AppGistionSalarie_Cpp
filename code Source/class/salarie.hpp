@@ -95,5 +95,15 @@ void removeUnSalarie(vector <salarie> &ob, int& i, int id) {
 		ob[j] = ob[j + 1];
 	}
 }
+void afficheInformationSalarie(vector <salarie> &ob, int& i) {
+		int j;
+		for (j = 0; j <= i; j++) {
+				cout << "identify est " << ob[j].id << endl;
+				cout << "nom est  " << ob[j].nomDeSalarie << endl;
+				cout << "prenom  " << ob[j].prenomDeSalarie << endl;
+				cout << "salerie est   " << ob[j].valSalarie << endl;
+
+			}
+}
 
 #endif // INCLUDED
