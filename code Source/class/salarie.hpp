@@ -95,13 +95,13 @@ void removeUnSalarie(vector <salarie> &ob, int& i, int id) {
 		ob[j] = ob[j + 1];
 	}
 }
-void afficheInformationdesSalarie(vector <salarie> &ob, int& i) {
-		int j;
-		for (j = 0; j <= i; j++) {
-				cout << "id est  " << ob[j].id << endl;
-				cout << "nom est  " <<ob[j]. nomDeSalarie << endl;
-				cout << "prenom est " <<ob[j]. prenomDeSalarie << endl;
-				cout << "salarie est   " << ob[j].valSalarie << endl;
+void afficheInformationSalarie(vector <salarie> &ob, int& i) {
+		int k;
+		for (k = 0; k <= i; k++) {
+				cout << "id est  " << ob[k].id << endl;
+				cout << "nom est  " <<ob[k]. nomDeSalarie << endl;
+				cout << "prenom est " <<ob[k]. prenomDeSalarie << endl;
+				cout << "salarie est   " << ob[k].valSalarie << endl;
 	
 		
 		}
